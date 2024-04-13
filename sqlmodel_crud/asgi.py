@@ -1,4 +1,7 @@
+
 from mangum import Mangum
-from sqlmodel_crud.main import app  # adjust the import according to your project structure
+from sqlmodel_crud.main import app #type: ignore
 
 handler = Mangum(app)
+
+

@@ -1,11 +1,7 @@
 from typing import Optional
 from fastapi import FastAPI
-from contextlib import asynccontextmanager
+# from contextlib import asynccontextmanager
 from sqlmodel import Field, Session, SQLModel, create_engine, select
-
-
-
-
 
 
 class Task(SQLModel, table=True):
@@ -23,12 +19,13 @@ engine = create_engine(sqlite_url)
 def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    create_db_and_tables()
-    yield
+# @asynccontextmanager
+# async def lifespan(app: FastAPI):
+#     create_db_and_tables()
+#     yield
 
-app: FastAPI = FastAPI(lifespan=lifespan)
+app: FastAPI = FastAPI()
+# app: FastAPI = FastAPI(lifespan=lifespan)
 
 
 
