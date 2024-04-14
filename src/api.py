@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from sqlmodel import Field, Session, SQLModel, create_engine, select
 
 
+
 class Task(SQLModel, table=True):
     id: Optional[int]  = Field(default=None, primary_key=True)
     content: str = Field(index=True)
