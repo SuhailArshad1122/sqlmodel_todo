@@ -1,7 +1,14 @@
 {
+  "builds": [
+    {
+      "src" : "main.py",
+      "use" : "@vercel/python",
+      "config": { "runtime": "python3.9" }
+    }
+  ],
   "rewrites": [
     {
-      "source": "/(.*)", "destination": "/"
+      "source": "/", "destination": "/"
     }
   ]
 }
