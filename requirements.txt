@@ -1,2 +1,6 @@
 mangum==0.17.0 ; python_version >= "3.9" and python_version < "4.0"
 typing-extensions==4.11.0 ; python_version >= "3.9" and python_version < "4.0"
+uvicorn[standard]==0.29.0
+fastapi==0.110.1
+sqlmodel==0.0.16
+psycopg2-binary==2.9.9
